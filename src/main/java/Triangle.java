@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Triangle {
 
     enum Type {
@@ -12,13 +14,15 @@ public class Triangle {
     private int c;
 
     public Triangle(int a, int b, int c) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        int[] values = { a, b, c };
+        Arrays.sort(values);
+        this.a = values[0];
+        this.b = values[1];
+        this.c = values[2];
     }
 
     public Type check() {
-        if (a > b + c || b > a + c) {
+        if (c > a + b) {
             return Type.INVALID;
         } else if (a == b && b == c) {
             return Type.EQUILATERAL;
