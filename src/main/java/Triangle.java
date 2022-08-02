@@ -22,7 +22,7 @@ public class Triangle {
             return Type.INVALID;
         } else if (a == b && b == c) {
             return Type.EQUILATERAL;
-        } else if (a == b || b == c) {
+        } else if (a == b || b == c || a == c) {
             return Type.ISOSCELES;
         } else {
             return Type.SCALENE;
