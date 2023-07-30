@@ -7,9 +7,9 @@ public class Triangle {
         SCALENE,
     };
 
-    private int a;
-    private int b;
-    private int c;
+    private final int a;
+    private final int b;
+    private final int c;
 
     public Triangle(int a, int b, int c) {
         this.a = a;
